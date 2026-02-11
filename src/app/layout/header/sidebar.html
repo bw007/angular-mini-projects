@@ -1,0 +1,8 @@
+<p-drawer [(visible)]="visible" styleClass="w-3xs!">
+  <ng-template #header>
+    <a routerLink="/" class="text-xl leading-none font-semibold tracking-tight text-black">
+      Angular Projects
+    </a>
+  </ng-template>
+</p-drawer>
+<p-button (click)="visible = true" class="fixed top-20" size="small" severity="secondary" icon="pi pi-bars" />
