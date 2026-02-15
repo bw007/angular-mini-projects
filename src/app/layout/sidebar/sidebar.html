@@ -1,0 +1,17 @@
+<p-drawer [(visible)]="visible" styleClass="w-2xs!">
+  <ng-template #header>
+    <a routerLink="/" class="text-xl leading-none font-semibold tracking-tight text-black">
+      Angular Projects
+    </a>
+  </ng-template>
+
+  <p-panelmenu [model]="items" class="w-full" />
+</p-drawer>
+
+<p-button
+  (click)="visible.set(true)"
+  class="fixed! top-20"
+  size="small"
+  severity="info"
+  icon="pi pi-th-large"
+/>

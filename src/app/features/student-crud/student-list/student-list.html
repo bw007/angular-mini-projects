@@ -1,0 +1,21 @@
+<p-table [value]="students()" [tableStyle]="{ width: '100%' }" size="small">
+  <ng-template #header>
+    <tr>
+      <th>Name</th>
+      <th style="width: 30%;">Science</th>
+      <th style="width: 150px;">Score</th>
+      <th style="width: 100px;"></th>
+    </tr>
+  </ng-template>
+  <ng-template #body let-student>
+    <tr>
+      <td>{{ student.name }}</td>
+      <td>{{ student.science }}</td>
+      <td>{{ student.score }}</td>
+      <td class="flex items-center gap-2">
+        <p-button (onClick)="removeStudent(student.id)" severity="danger" size="small" icon="pi pi-trash"></p-button>
+        <p-button (onClick)="updateStudent.emit(student)" severity="info" size="small" icon="pi pi-pencil"></p-button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

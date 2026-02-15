@@ -1,0 +1,18 @@
+<p-dialog
+  header="Edit Profile"
+  [modal]="true"
+  [visible]="dialogVisible()"
+  (visibleChange)="setDialogVisible.emit(false)"
+>
+  <div class="flex flex-col gap-4">
+    <div class="flex items-center gap-2">
+      <input pSize="small" pInputText placeholder="Name" name="name" [(ngModel)]="name">
+      <input pSize="small" pInputText name="science" placeholder="Science" [(ngModel)]="science">
+      <p-inputnumber size="small" inputStyleClass="w-20" type="number" name="score" [(ngModel)]="score" />
+    </div>
+    <div class="flex justify-end gap-2">
+      <p-button size="small" label="Cancel" severity="secondary" (click)="setDialogVisible.emit(true)" />
+      <p-button size="small" label="Save" (click)="setDialogVisible.emit(false)" />
+    </div>
+  </div>
+</p-dialog>

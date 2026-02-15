@@ -1,1 +1,10 @@
-<p>student-crud works!</p>,
+<div class="container mx-auto flex flex-col gap-4">
+  <div class="flex items-center justify-between py-6">
+    <a routerLink="/student-crud" class="text-xl leading-none font-semibold tracking-tight text-black">
+      Student List
+    </a>
+    <p-button (click)="dialogVisible.set(true)" size="small">Add</p-button>
+  </div>
+  <app-student-list (updateStudent)="updateStudent($event)" [students]="students()"></app-student-list>
+  <app-student-dialog (setDialogVisible)="dialogVisible.set(!dialogVisible())" [dialogVisible]="dialogVisible()"></app-student-dialog>
+</div>
